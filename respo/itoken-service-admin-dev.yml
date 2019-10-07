@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: itoken-service-admin
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    username: root
+    password: 721000
+    url: jdbc:mysql://192.168.108.126:3306/itoken?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+server:
+  port: 8501
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/,http://${eureka.instance.hostname}:8861/eureka/,http://${eureka.instance.hostname}:8961/eureka/
+  instance:
+    hostname: 192.168.108.126
+    prefer-ip-address: true
+
+mybatis:
+  mapper-locations: mapper/*.xml
+  type-aliases-package: com.tang.itoken.service.admin.domain
