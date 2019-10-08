@@ -13,9 +13,9 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka/,http://${eureka.instance.hostname}:8861/eureka/,http://${eureka.instance.hostname}:8961/eureka/
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka
   instance:
-    hostname: 192.168.108.126
+    hostname: localhost
     prefer-ip-address: true
 
 mybatis:
