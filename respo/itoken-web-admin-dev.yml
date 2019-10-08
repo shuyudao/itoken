@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: itoken-web-admin
+
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:8761/eureka/
+  instance:
+    hostname: itoken-web-admin
+    prefer-ip-address: true
+
+feign:
+  hystrix:
+    enabled: true
+
+server:
+  port: 8401
