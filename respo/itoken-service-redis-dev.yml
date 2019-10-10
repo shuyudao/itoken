@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: itoken-service-redis
+  redis:
+    sentinel:
+      master: myMaster
+      nodes: 192.168.25.128:26379, 192.168.25.128:26380, 192.168.25.128:26381
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+
+server:
+  port: 8502
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: itoken-service-redis
+    prefer-ip-address: true
