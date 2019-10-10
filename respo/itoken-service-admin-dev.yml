@@ -20,4 +20,4 @@ eureka:
 
 mybatis:
   mapper-locations: mapper/*.xml
-  type-aliases-package: com.tang.itoken.service.admin.domain
+  type-aliases-package: com.tang.itoken.common.domain
