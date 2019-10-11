@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: itoken-service-sso
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    username: root
+    password: 721000
+    url: jdbc:mysql://localhost:3306/itoken?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+  thymeleaf:
+    cache: false
+
+server:
+  port: 8503
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: itoken-service-sso
+    prefer-ip-address: true
+
+mybatis:
+  mapper-locations: mapper/*.xml
+  type-aliases-package: com.tang.itoken.common.domain
